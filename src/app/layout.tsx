@@ -25,8 +25,8 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('min-h-screen font-body antialiased bg-background')}>
-        <CursorGlow />
-        <div className="relative flex min-h-screen flex-col">
+        <div className="relative flex min-h-screen flex-col" style={{ isolation: 'isolate' }}>
+          <CursorGlow />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
