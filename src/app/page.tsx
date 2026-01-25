@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images.json';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { TypingAnimation } from '@/components/typing-animation';
 
 const team = [
   {
@@ -67,9 +68,10 @@ export default function Home() {
                 priority
               />
             )}
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight">
-              A nimble digital product studio unlocking growth with design
-            </h1>
+            <TypingAnimation
+              text="A nimble digital product studio unlocking growth with design"
+              className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight"
+            />
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Your design partner for crafting products users love.
             </p>

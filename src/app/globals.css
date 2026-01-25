@@ -79,12 +79,29 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 32px;
-  height: 32px;
+  width: 550px;
+  height: 550px;
   border-radius: 50%;
   background: hsl(var(--primary));
-  opacity: 0.4;
+  opacity: 0.1;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: -1;
+  filter: blur(150px);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 0.25rem;
+  background-color: hsl(var(--primary));
+  animation: blink 1s infinite;
+  vertical-align: bottom;
 }
