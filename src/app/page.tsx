@@ -9,29 +9,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { TypingAnimation } from '@/components/typing-animation';
 
-const team = [
-  {
-    name: "Alex Johnson",
-    role: "Founder & CEO",
-    imageId: "team-member-1"
-  },
-  {
-    name: "Samantha Lee",
-    role: "Head of Marketing",
-    imageId: "team-member-2"
-  },
-  {
-    name: "David Chen",
-    role: "Lead Developer",
-    imageId: "team-member-3"
-  },
-    {
-    name: "Maria Garcia",
-    role: "Creative Director",
-    imageId: "team-member-4"
-  }
-];
-
 const processSteps = [
   {
     step: 1,
@@ -156,42 +133,6 @@ export default function Home() {
           </div>
       </section>
       
-      <section id="team" className="w-full py-20 md:py-24 lg:py-32 bg-secondary/30">
-          <div className="container mx-auto px-4 md:px-6">
-              <div className="space-y-4 text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">
-                      Meet Our Team
-                  </h2>
-                  <p className="max-w-2xl mx-auto text-muted-foreground md:text-lg">
-                      The creative minds behind our success.
-                  </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                  {team.map((member) => {
-                      const memberImage = placeholderImages.find(img => img.id === member.imageId);
-                      return (
-                          <Card key={member.name} className="text-center border-none bg-transparent shadow-none">
-                              <CardContent className="p-0">
-                                  {memberImage && (
-                                      <Image
-                                          src={memberImage.imageUrl}
-                                          alt={`Portrait of ${member.name}`}
-                                          width={400}
-                                          height={400}
-                                          data-ai-hint={memberImage.imageHint}
-                                          className="rounded-full w-48 h-48 object-cover mx-auto mb-4 shadow-lg"
-                                      />
-                                  )}
-                                  <h3 className="text-xl font-headline font-bold">{member.name}</h3>
-                                  <p className="text-primary">{member.role}</p>
-                              </CardContent>
-                          </Card>
-                      );
-                  })}
-              </div>
-          </div>
-      </section>
-
       <section id="contact" className="w-full py-20 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="space-y-4 text-center mb-12">
