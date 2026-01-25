@@ -156,7 +156,7 @@ export default function Home() {
                         </div>
                         <div>
                             <h3 className="font-semibold text-lg">Email</h3>
-                            <p className="text-muted-foreground">contact@sprinova.digital</p>
+                            <p className="text-muted-foreground">sprinovadigital@gmail.com</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -165,7 +165,7 @@ export default function Home() {
                         </div>
                         <div>
                             <h3 className="font-semibold text-lg">Phone</h3>
-                            <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                            <p className="text-muted-foreground">7517287739</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -174,7 +174,7 @@ export default function Home() {
                         </div>
                         <div>
                             <h3 className="font-semibold text-lg">Address</h3>
-                            <p className="text-muted-foreground">123 Innovation Drive, Tech City, 12345</p>
+                            <p className="text-muted-foreground">604 Shubharam Clara, Pune, 412101</p>
                         </div>
                     </div>
                 </div>

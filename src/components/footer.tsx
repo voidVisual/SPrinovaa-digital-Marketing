@@ -41,15 +41,15 @@ export function Footer() {
              <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-primary mt-1 shrink-0" /> 
-                    <span className="text-sm text-muted-foreground">contact@sprinova.digital</span>
+                    <span className="text-sm text-muted-foreground">sprinovadigital@gmail.com</span>
                 </li>
                  <li className="flex items-start gap-3">
                     <Phone className="w-5 h-5 text-primary mt-1 shrink-0" /> 
-                    <span className="text-sm text-muted-foreground">+1 (555) 123-4567</span>
+                    <span className="text-sm text-muted-foreground">7517287739</span>
                 </li>
                  <li className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-primary mt-1 shrink-0" /> 
-                    <span className="text-sm text-muted-foreground">123 Innovation Drive, Tech City, 12345</span>
+                    <span className="text-sm text-muted-foreground">604 Shubharam Clara, Pune, 412101</span>
                 </li>
              </ul>
           </div>
