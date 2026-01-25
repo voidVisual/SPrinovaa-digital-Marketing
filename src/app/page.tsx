@@ -52,10 +52,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section id="home" className="relative w-full h-[80vh] flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full bg-primary/10" />
+      <section id="home" className="relative w-full flex items-center justify-center text-center py-20">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full bg-primary/10 -z-10" />
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative">
           <div className="max-w-4xl mx-auto">
             {logoImage && (
               <Image
