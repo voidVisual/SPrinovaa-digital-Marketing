@@ -79,15 +79,15 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 550px;
-  height: 550px;
+  width: 2200px;
+  height: 2200px;
   border-radius: 50%;
   background: hsl(var(--primary));
   opacity: 0.1;
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: -1;
-  filter: blur(150px);
+  filter: blur(300px);
 }
 
 @keyframes blink {
