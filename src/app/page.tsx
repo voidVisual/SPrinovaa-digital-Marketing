@@ -2,47 +2,29 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/constants';
 import Link from 'next/link';
-import Image from 'next/image';
-import { placeholderImages } from '@/lib/placeholder-images.json';
 import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
-  const heroImage = placeholderImages.find((img) => img.id === "hero");
 
   return (
     <div className="flex flex-col">
-      <section className="relative w-full pt-24 pb-24 md:pt-32 md:pb-32 lg:pt-48 lg:pb-48">
-        <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight">
-              Your Strategic Partner for <span className="text-primary">Digital Transformation</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-              We boost your business through cutting-edge technology and innovative digital marketing strategies designed for growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button asChild size="lg" className="transition-transform duration-300 hover:scale-105">
-                <Link href="/contact">
-                  Contact Us <ArrowRight className="ml-2" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="transition-transform duration-300 hover:scale-105">
-                <Link href="#services">Our Services</Link>
-              </Button>
+      <section className="relative w-full h-[80vh] flex items-center justify-center text-center overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+            <div className="max-w-4xl mx-auto">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight">
+                    A nimble digital product studio unlocking growth with design
+                </h1>
+                <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                    Your design partner for crafting products users love.
+                </p>
+                <div className="mt-8 flex justify-center">
+                    <Button asChild size="lg" className="transition-transform duration-300 hover:scale-105">
+                        <Link href="/about">
+                            LEARN MORE
+                        </Link>
+                    </Button>
+                </div>
             </div>
-          </div>
-          <div className="relative h-64 md:h-[400px] lg:h-[500px]">
-            {heroImage && (
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                priority
-                data-ai-hint={heroImage.imageHint}
-                className="rounded-lg shadow-2xl object-cover"
-              />
-            )}
-          </div>
         </div>
       </section>
 
