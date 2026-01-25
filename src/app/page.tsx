@@ -69,7 +69,7 @@ export default function Home() {
               />
             )}
             <TypingAnimation
-              text="A nimble digital product studio unlocking growth with design"
+              textLines={["A nimble digital product studio", "unlocking growth with design"]}
               className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight"
             />
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
