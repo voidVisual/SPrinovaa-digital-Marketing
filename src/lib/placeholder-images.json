@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "Digital marketing team collaborating in a modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkaWdpdGFsJTIwbWFya2V0aW5nfGVufDB8fHx8MTc2OTI3NDc4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital marketing"
+    }
+  ]
 }
