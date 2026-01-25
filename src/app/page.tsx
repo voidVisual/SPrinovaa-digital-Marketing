@@ -36,22 +36,27 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <section id="home" className="relative w-full h-[80vh] flex items-center justify-center text-center overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full bg-primary/10" />
+
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-            <div className="max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight">
-                    A nimble digital product studio unlocking growth with design
-                </h1>
-                <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                    Your design partner for crafting products users love.
-                </p>
-                <div className="mt-8 flex justify-center">
-                    <Button asChild size="lg" className="transition-transform duration-300 hover:scale-105">
-                        <Link href="/#about">
-                            LEARN MORE
-                        </Link>
-                    </Button>
-                </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-headline font-bold tracking-[0.3em] text-foreground/40 mb-8">
+              SPRinova
+            </h2>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight">
+              A nimble digital product studio unlocking growth with design
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Your design partner for crafting products users love.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <Button asChild size="lg" className="transition-transform duration-300 hover:scale-105">
+                <Link href="/#about">
+                  LEARN MORE
+                </Link>
+              </Button>
             </div>
+          </div>
         </div>
       </section>
 
