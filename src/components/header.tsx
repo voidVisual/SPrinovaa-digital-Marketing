@@ -9,8 +9,8 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About Us" },
   { href: "/#services", label: "Services" },
 ];
 
@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2" prefetch={false}>
+        <Link href="/#home" className="flex items-center gap-2" prefetch={false}>
           <span className="font-headline text-lg font-semibold">SPRinova Digital</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8">
@@ -41,7 +41,7 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-4">
             <Button asChild className="hidden md:flex transition-transform duration-300 hover:scale-105">
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/#contact">Contact Us</Link>
             </Button>
             <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -53,7 +53,7 @@ export function Header() {
                 </SheetTrigger>
                 <SheetContent side="right">
                 <div className="grid gap-4 py-6">
-                    <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link href="/#home" className="flex items-center gap-2 mb-4" onClick={() => setIsMobileMenuOpen(false)}>
                     <span className="font-headline text-lg font-semibold">SPRinova Digital</span>
                     </Link>
                     {navLinks.map((link) => (
@@ -71,7 +71,7 @@ export function Header() {
                     </Link>
                     ))}
                     <Button asChild className="mt-4">
-                        <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+                        <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
                     </Button>
                 </div>
                 </SheetContent>

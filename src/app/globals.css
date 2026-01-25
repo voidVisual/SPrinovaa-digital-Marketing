@@ -7,6 +7,9 @@ body {
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   :root {
     --background: 0 0% 0%;
     --foreground: 0 0% 98%;

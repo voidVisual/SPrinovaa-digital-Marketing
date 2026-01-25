@@ -2,13 +2,40 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/constants';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import { placeholderImages } from '@/lib/placeholder-images.json';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+
+const team = [
+  {
+    name: "Alex Johnson",
+    role: "Founder & CEO",
+    imageId: "team-member-1"
+  },
+  {
+    name: "Samantha Lee",
+    role: "Head of Marketing",
+    imageId: "team-member-2"
+  },
+  {
+    name: "David Chen",
+    role: "Lead Developer",
+    imageId: "team-member-3"
+  },
+    {
+    name: "Maria Garcia",
+    role: "Creative Director",
+    imageId: "team-member-4"
+  }
+];
 
 export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative w-full h-[80vh] flex items-center justify-center text-center overflow-hidden">
+      <section id="home" className="relative w-full h-[80vh] flex items-center justify-center text-center overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight">
@@ -19,7 +46,7 @@ export default function Home() {
                 </p>
                 <div className="mt-8 flex justify-center">
                     <Button asChild size="lg" className="transition-transform duration-300 hover:scale-105">
-                        <Link href="/about">
+                        <Link href="/#about">
                             LEARN MORE
                         </Link>
                     </Button>
@@ -56,21 +83,129 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="cta" className="w-full py-20 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-            <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight mb-4">
-                    Ready to elevate your digital presence?
-                </h2>
-                <p className="text-muted-foreground md:text-lg mb-8">
-                    Let's work together to build something amazing. Get in touch with us today to discuss your project.
+      <section id="about" className="w-full py-20 md:py-24 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">About Us</h2>
+                <p className="max-w-2xl mx-auto text-muted-foreground md:text-lg mt-4">
+                    A passionate team of strategists, creatives, and technologists dedicated to helping businesses thrive in the digital world.
                 </p>
-                <Button asChild size="lg" className="transition-transform duration-300 hover:scale-105">
-                    <Link href="/contact">
-                        Get a Free Consultation <ArrowRight className="ml-2" />
-                    </Link>
-                </Button>
+              </div>
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div className="space-y-4">
+                      <h3 className="text-2xl font-headline font-bold">Our Mission</h3>
+                      <p className="text-muted-foreground">
+                          To empower businesses with innovative and effective digital solutions that drive growth, foster engagement, and create lasting value. We believe in the power of technology to transform brands and build meaningful connections with their audiences.
+                      </p>
+                  </div>
+                  <div className="space-y-4">
+                      <h3 className="text-2xl font-headline font-bold">Our Vision</h3>
+                      <p className="text-muted-foreground">
+                          To be a leading digital agency recognized for our creativity, strategic thinking, and commitment to client success. We aspire to constantly push the boundaries of what's possible in the digital landscape, setting new standards for excellence and innovation.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <section id="team" className="w-full py-20 md:py-24 lg:py-32 bg-secondary/30">
+          <div className="container mx-auto px-4 md:px-6">
+              <div className="space-y-4 text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">
+                      Meet Our Team
+                  </h2>
+                  <p className="max-w-2xl mx-auto text-muted-foreground md:text-lg">
+                      The creative minds behind our success.
+                  </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {team.map((member) => {
+                      const memberImage = placeholderImages.find(img => img.id === member.imageId);
+                      return (
+                          <Card key={member.name} className="text-center border-none bg-transparent shadow-none">
+                              <CardContent className="p-0">
+                                  {memberImage && (
+                                      <Image
+                                          src={memberImage.imageUrl}
+                                          alt={`Portrait of ${member.name}`}
+                                          width={400}
+                                          height={400}
+                                          data-ai-hint={memberImage.imageHint}
+                                          className="rounded-full w-48 h-48 object-cover mx-auto mb-4 shadow-lg"
+                                      />
+                                  )}
+                                  <h3 className="text-xl font-headline font-bold">{member.name}</h3>
+                                  <p className="text-primary">{member.role}</p>
+                              </CardContent>
+                          </Card>
+                      );
+                  })}
+              </div>
+          </div>
+      </section>
+
+      <section id="contact" className="w-full py-20 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="space-y-4 text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">
+              Contact Us
+            </h2>
+            <p className="max-w-2xl mx-auto text-muted-foreground md:text-lg">
+              Have a project in mind? We'd love to hear from you.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <Card className="bg-secondary/50">
+              <CardHeader>
+                <CardTitle>Send us a message</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <Input placeholder="Your Name" />
+                    <Input type="email" placeholder="Your Email" />
+                  </div>
+                  <Input placeholder="Subject" />
+                  <Textarea placeholder="Your Message" rows={6} />
+                  <Button type="submit" size="lg" className="w-full">Send Message</Button>
+                </form>
+              </CardContent>
+            </Card>
+
+            <div className="space-y-8">
+                <h2 className="text-2xl font-headline font-bold">Our Information</h2>
+                <div className="space-y-6">
+                    <div className="flex items-center gap-4">
+                        <div className="bg-primary/10 p-3 rounded-full">
+                            <Mail className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-lg">Email</h3>
+                            <p className="text-muted-foreground">contact@sprinova.digital</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <div className="bg-primary/10 p-3 rounded-full">
+                            <Phone className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-lg">Phone</h3>
+                            <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <div className="bg-primary/10 p-3 rounded-full">
+                            <MapPin className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-lg">Address</h3>
+                            <p className="text-muted-foreground">123 Innovation Drive, Tech City, 12345</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+          </div>
         </div>
       </section>
     </div>
