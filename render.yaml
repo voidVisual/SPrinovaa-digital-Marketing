@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: sprinovaa-digital-marketing
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Optional: Only needed if using AI content generation features
+      # - key: GOOGLE_GENAI_API_KEY
+      #   sync: false
+      # Optional: Only needed if using Firebase features
+      # - key: NEXT_PUBLIC_FIREBASE_API_KEY
+      #   sync: false
+      # - key: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+      #   sync: false
+      # - key: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+      #   sync: false
+      # - key: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+      #   sync: false
+      # - key: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+      #   sync: false
+      # - key: NEXT_PUBLIC_FIREBASE_APP_ID
+      #   sync: false
