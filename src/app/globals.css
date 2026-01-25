@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @layer base {
@@ -14,48 +14,49 @@ body {
     --card-foreground: 224 71.4% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
-    --primary: 211 100% 50%;
+    --primary: 232 92% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 17% 98%;
+    --secondary: 220 15% 96%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 45 100% 51%;
-    --accent-foreground: 48 95.5% 12.9%;
+    --accent: 321 100% 50%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 211 100% 50%;
-    --radius: 0.5rem;
-    --chart-1: 211 100% 50%;
-    --chart-2: 45 100% 51%;
+    --ring: 232 92% 60%;
+    --radius: 0.75rem;
+    --chart-1: 232 92% 60%;
+    --chart-2: 321 100% 50%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 231 68% 10%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 211 100% 50%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 217.2 32.6% 17.5%;
+    --primary: 232 92% 65%;
+    --primary-foreground: 232 92% 98%;
+    --secondary: 231 50% 15%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 45 100% 51%;
-    --accent-foreground: 48 95.5% 12.9%;
+    --accent: 321 100% 50%;
+    --accent-foreground: 321 100% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 211 100% 50%;
-    --chart-1: 211 100% 50%;
-    --chart-2: 45 100% 51%;
+    --ring: 232 92% 65%;
+    --radius: 0.75rem;
+    --chart-1: 232 92% 65%;
+    --chart-2: 321 100% 50%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
