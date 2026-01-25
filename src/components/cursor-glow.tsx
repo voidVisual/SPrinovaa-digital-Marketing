@@ -7,7 +7,7 @@ export function CursorGlow() {
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      setPosition({ x: event.pageX, y: event.pageY });
+      setPosition({ x: event.clientX, y: event.clientY });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
