@@ -24,9 +24,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('min-h-screen font-body antialiased')}>
+      <body className={cn('min-h-screen font-body antialiased bg-background')}>
         <CursorGlow />
-        <div className="relative flex min-h-screen flex-col bg-background">
+        <div className="relative flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
