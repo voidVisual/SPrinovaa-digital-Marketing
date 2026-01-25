@@ -3,8 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/constants';
 import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import Image from 'next/image';
-import { placeholderImages } from '@/lib/placeholder-images.json';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { TypingAnimation } from '@/components/typing-animation';
@@ -25,8 +23,6 @@ const processSteps = [
 ];
 
 export default function Home() {
-  const logoImage = placeholderImages.find(img => img.id === 'sprinova-logo');
-
   return (
     <div className="flex flex-col">
       <section id="home" className="relative w-full flex items-center justify-center text-center py-20">
@@ -34,17 +30,6 @@ export default function Home() {
 
         <div className="container mx-auto px-4 md:px-6 relative">
           <div className="max-w-4xl mx-auto">
-            {logoImage && (
-              <Image
-                src={logoImage.imageUrl}
-                alt="SPrinova Digital Marketing Logo"
-                width={400}
-                height={114}
-                className="mx-auto mb-8"
-                data-ai-hint={logoImage.imageHint}
-                priority
-              />
-            )}
             <TypingAnimation
               textLines={["A nimble digital product studio", "unlocking growth with design"]}
               className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight"

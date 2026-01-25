@@ -1,12 +1,6 @@
 {
   "placeholderImages": [
     {
-      "id": "sprinova-logo",
-      "description": "The SPrinova Digital Marketing company logo.",
-      "imageUrl": "/images/SPrinovaa.png",
-      "imageHint": "company logo"
-    },
-    {
       "id": "hero",
       "description": "Abstract digital art representing technology and transformation.",
       "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkaWdpdGFsJTIwdHJhbnNmb3JtYXRpb258ZW58MHx8fHwxNzY5MjEzOTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
