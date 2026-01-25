@@ -31,6 +31,21 @@ const team = [
   }
 ];
 
+const processSteps = [
+  {
+    step: 1,
+    description: "Hit the ground running with an ambitious senior designer on retainer.",
+  },
+  {
+    step: 2,
+    description: "We'll quickly embed into your team, stripping away process and delivering impactful design in days.",
+  },
+  {
+    step: 3,
+    description: "We'll partner with you for the long haul, helping you get your product shipped and scaled.",
+  },
+];
+
 export default function Home() {
 
   return (
@@ -56,6 +71,23 @@ export default function Home() {
                 </Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" className="w-full py-20 md:py-24 lg:py-32 bg-primary">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl text-background">Ready to go?</h2>
+            <p className="text-4xl md:text-5xl font-bold text-background">We run things hot over here.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {processSteps.map((step) => (
+              <div key={step.step} className="p-8 rounded-lg bg-black/5 text-background">
+                <div className="text-8xl font-bold mb-6">{step.step}</div>
+                <p className="text-lg">{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
