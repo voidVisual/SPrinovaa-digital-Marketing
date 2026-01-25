@@ -7,7 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { CursorGlow } from '@/components/cursor-glow';
 
 export const metadata: Metadata = {
-  title: 'SPRinova | Your strategic partner for digital transformation',
+  title: 'SPrinova-Digital Marketing | Your strategic partner for digital transformation',
   description: 'We boost your business through technology and digital marketing.',
 };
 

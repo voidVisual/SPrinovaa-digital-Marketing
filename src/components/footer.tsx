@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-                <p className="text-lg font-headline font-semibold">SPRinova</p>
+                <p className="text-lg font-headline font-semibold">SPrinova-Digital Marketing</p>
             </Link>
             <p className="text-sm text-muted-foreground">
                 Your strategic partner for digital transformation.
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 mt-8 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} SPRinova. All rights reserved.
+          &copy; {new Date().getFullYear()} SPrinova-Digital Marketing. All rights reserved.
         </div>
       </div>
     </footer>
