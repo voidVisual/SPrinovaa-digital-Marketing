@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images.json';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { LogoIcon } from '@/components/logo-icon';
 
 const team = [
   {
@@ -55,8 +56,9 @@ export default function Home() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-headline font-bold tracking-[0.3em] text-foreground/40 mb-8">
-              SPrinova-Digital Marketing
+            <h2 className="text-4xl font-headline font-bold tracking-[0.3em] text-foreground/40 mb-8 flex items-center justify-center gap-4">
+              <LogoIcon className="h-12 w-12" />
+              <span>SPrinova-Digital Marketing</span>
             </h2>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-black tracking-tight">
               A nimble digital product studio unlocking growth with design

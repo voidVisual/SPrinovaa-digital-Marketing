@@ -1,6 +1,7 @@
 import { Facebook, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { LogoIcon } from "./logo-icon";
 
 export function Footer() {
   return (
@@ -9,6 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
+                <LogoIcon className="h-8 w-8" />
                 <p className="text-lg font-headline font-semibold">SPrinova-Digital Marketing</p>
             </Link>
             <p className="text-sm text-muted-foreground">
