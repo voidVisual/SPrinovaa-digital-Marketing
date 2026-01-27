@@ -27,7 +27,7 @@ docker-compose up -d
 - **[Environment Setup](ENVIRONMENT.md)** - Local development guide
 
 ### For DevOps & Operations
-- **[DEVOPS.md](DEVOPS.md)** - DevOps documentation index (⭐ Start here)
+- **[DEVOPS.md](DEVOPS.md)** - DevOps documentation index 
 - **[DEPLOYMENT.md](DEPLOYMENT.md)** - Complete deployment guide
 - **[INFRASTRUCTURE.md](INFRASTRUCTURE.md)** - Architecture & scaling
 - **[MONITORING.md](MONITORING.md)** - Monitoring & troubleshooting
@@ -216,13 +216,3 @@ This project is part of the SPrinovaa Digital Marketing Platform.
 
 ---
 
-## Contact
-
-**DevOps Team**: devops@your-domain.com  
-**On-Call Support**: on-call@your-domain.com  
-**Status**: Production Ready
-
----
-
-**Last Updated**: January 27, 2026  
-**Maintained By**: DevOps Team
